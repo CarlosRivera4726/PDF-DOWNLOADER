@@ -29,7 +29,16 @@ Este programa está diseñado para ser altamente personalizable según las neces
 
 ### Variables de Entorno:
 El programa utiliza variables de entorno para configurar rutas de directorio, nombres de archivos y otros parámetros. Esto facilita la adaptación del programa a diferentes entornos de trabajo sin necesidad de modificar el código fuente.
+```JavaScript
+// Ver el .env.example por si se quiere trabajar en local, sino colocar las varibles en el PATH
 
+PATH_SAVE="YOUR_PATH"
+// por si dejas abierto el programa y copias una url que no contenga un pdf o la dirección al PDF, lo que hará la lógica es usar esta variable e ignorar las demás
+URL_FIND="YOUR URL TO FIND AND DONT COPY ANY OTHER THING"
+URL_INIT="IF YOUR URL TO DOWNLOAD THE PDF FILE HAS A PARAMETER IN MID OF THIS LINK PUT HERE, ELSE REPLACE THE VARIABLE WITH YOUR URL"
+URL_END="COMPLETE THE URL WITH THE REST OF THE PARAMETERS IF IS NECESARY, ELSE REPLACE THE VARIABLE WITH YOUR URL"
+
+```
 ### Expresiones Regulares (Regex):
 Las expresiones regulares se utilizan para extraer datos específicos de las facturas, como el número de identificación del paciente, el nombre completo y otros detalles relevantes. Estas expresiones regulares pueden ser modificadas según el formato de las facturas o los requisitos del usuario.
 
@@ -53,13 +62,13 @@ Con este programa, el proceso de descarga y organización de facturas se vuelve 
 Clone the project
 
 ```bash
-  git clone https://github.com/CarlosRivera4726/download_pdf
+  git clone https://github.com/CarlosRivera4726/PDF-DOWNLOADER
 ```
 
 Go to the project directory
 
 ```bash
-  cd download-pdf
+  cd PDF-DOWNLOADER
 ```
 
 Install dependencies manually
@@ -86,7 +95,7 @@ py main.py
 ```
 
 **Linux:**
-to use Linux or Mac you need to change the command os.system("cls") to os.system("clear")
+If you want to use `Linux` or `Mac` you need to change the command os.system("cls") to os.system("clear") inside the file `vidanova.py` 
 
 ```bash
 python3 main.py
@@ -98,4 +107,4 @@ python3 main.py
 
 ## Agradecimiento 🤚🤚
 
-Gracias por ver este repositorio y si quieren pueden apoyar para más
+Gracias por ver este repositorio y si quieren pueden apoyar para más.
